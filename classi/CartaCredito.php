@@ -54,7 +54,16 @@ class cartaCredito {
 
     //Creo una funzione di controllo della scadenza della carta di credito
 
-    
+    public function isExpired() {
+        $expires = DateTime::createFromFormat('m-y', $this->expirationMonth. '-'. $this ->expirationYear);
+        $now = new DateTime();
+
+        if ($expires < $now) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 

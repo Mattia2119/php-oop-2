@@ -5,6 +5,7 @@ class utente {
     public $cognome;
     protected $email;
     protected $discount = 0; //lo sconto di default per il mio utente generico sarà 0//
+    protected $creditCard;
 
     public function __construct($nome,$cognome,$email)
     {
@@ -30,4 +31,8 @@ class utente {
             echo"La mail che hai inserito non è valida";
         }
     }
+
+    public function setCreditCard($creditCard) {
+        $this -> creditCard = $creditCard;
+    } 
 }
